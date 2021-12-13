@@ -1,11 +1,12 @@
 import React from 'react'
+import { PageWrapper } from '../styles/General.styled'
 
 const Results = () =>
 {
 	return (
-		<div>
+		<PageWrapper>
 
-		</div>
+		</PageWrapper>
 	)
 }
 
