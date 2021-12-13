@@ -1,5 +1,5 @@
-import React from 'react'
-import { createContext, useState, } from 'react'
+import React, { useState } from 'react'
+import { createContext, useEffect } from 'react'
 
 const QuizContext = createContext({})
 
@@ -9,8 +9,11 @@ export const QuizProvidor = ({ children }) =>
 
 
 
+
+
 	return (
 		<QuizContext.Provider value={{
+
 
 
 		}}>
