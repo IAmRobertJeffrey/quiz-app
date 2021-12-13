@@ -8,15 +8,31 @@ import { Box } from '@mui/system'
 import DifficultyPicker from '../components/DifficultyPicker'
 
 import CategoryPicker from '../components/CategoryPicker'
+import { useNavigate } from 'react-router-dom'
+import QuizContext from '../context/QuizContext'
 
 const Home = () =>
 {
-	const { getCategories, categories, selectedDifficulty, setSelectedDifficulty, getQuiz } = useContext(ApiContext)
-
+	const { getCategories, selectedDifficulty, selectedCategory, getQuiz } = useContext(ApiContext)
+	const { setScore, setQuestionNumber } = useContext(QuizContext)
+	const navigate = useNavigate()
 	useEffect(() =>
 	{
 		getCategories();
+		setScore(0);
+		setQuestionNumber(0);
+		console.log("got categories");
+
 	}, [])
+
+	function handleStartQuiz()
+	{
+		if (selectedDifficulty && selectedCategory)
+		{
+			getQuiz()
+			navigate("/quiz")
+		}
+	}
 
 	return (
 		<PageWrapper>
@@ -25,7 +41,7 @@ const Home = () =>
 				<Box sx={{ display: "flex", flexDirection: "column", width: "50%", gridGap: "4rem" }}>
 					<CategoryPicker />
 					<DifficultyPicker />
-					<Button onClick={getQuiz} variant="contained">Start Quiz</Button>
+					<Button onClick={handleStartQuiz} variant="contained">Start Quiz</Button>
 				</Box>
 			</Container>
 

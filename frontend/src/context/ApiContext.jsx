@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
-import { createContext, useEffect } from 'react'
+import { createContext } from 'react'
+
 
 const ApiContext = createContext({})
 
 export const ApiProvidor = ({ children }) =>
 {
+
 	const [categories, setCategories] = useState([]);
-	const [difficulties, setDifficulties] = useState(["easy", "medium", "hard"])
+	const [difficulties] = useState(["easy", "medium", "hard"])
 	const [selectedDifficulty, setSelectedDifficulty] = useState('')
 	const [selectedCategory, setSelectedCategory] = useState('')
 	const [currentQuizQuestions, setCurrentQuizQuestions] = useState([])
@@ -26,7 +28,6 @@ export const ApiProvidor = ({ children }) =>
 		const response = await fetch(`https://opentdb.com/api.php?amount=10&category=${selectedCategory}&difficulty=${selectedDifficulty}&type=multiple`)
 		const data = await response.json()
 		setCurrentQuizQuestions(data)
-
 	}
 
 
@@ -40,7 +41,9 @@ export const ApiProvidor = ({ children }) =>
 			setSelectedDifficulty,
 			selectedCategory,
 			setSelectedCategory,
-			getQuiz
+			getQuiz,
+			currentQuizQuestions,
+			setCurrentQuizQuestions,
 
 
 		}}>

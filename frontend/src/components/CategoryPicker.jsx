@@ -5,7 +5,7 @@ import ApiContext from '../context/ApiContext'
 
 const CategoryPicker = () =>
 {
-	const { getCategories, categories, selectedCategory, setSelectedCategory } = useContext(ApiContext)
+	const { categories, selectedCategory, setSelectedCategory } = useContext(ApiContext)
 	return (
 		<FormControl fullWidth >
 			<InputLabel id="demo-simple-select-label">Quiz Category</InputLabel>

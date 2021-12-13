@@ -1,18 +1,26 @@
-import React, { useState } from 'react'
-import { createContext, useEffect } from 'react'
+import React, { useContext, useState } from 'react'
+import { createContext } from 'react'
+import ApiContext from './ApiContext'
 
 const QuizContext = createContext({})
 
 export const QuizProvidor = ({ children }) =>
 {
 
-
-
-
+	const [score, setScore] = useState(0)
+	const [currentQuizQuestion, setCurrentQuizQuestion] = useState('')
+	const [questionNumber, setQuestionNumber] = useState(0)
 
 
 	return (
 		<QuizContext.Provider value={{
+
+			currentQuizQuestion,
+			setCurrentQuizQuestion,
+			questionNumber,
+			setQuestionNumber,
+			score,
+			setScore,
 
 
 
