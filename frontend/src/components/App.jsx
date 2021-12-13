@@ -3,7 +3,6 @@ import { AppWrapper } from "../styles/App.styled";
 import { Routes, Route } from 'react-router-dom'
 import Home from '../pages/Home'
 import Quiz from "../pages/Quiz";
-import QuizSelect from "../pages/QuizSelect";
 import Results from "../pages/Results";
 import Profile from "../pages/Profile";
 import Login from "../pages/Login";
@@ -16,7 +15,6 @@ function App()
 			<Header />
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/quiz-select" element={<QuizSelect />} />
 				<Route path="/quiz" element={<Quiz />} />
 				<Route path="/results" element={<Results />} />
 				<Route path="/profile" element={<Profile />} />
