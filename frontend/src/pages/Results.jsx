@@ -7,9 +7,12 @@ import { Typography } from '@mui/material'
 const Results = () =>
 {
 	const { currentQuizQuestion, setCurrentQuizQuestion, questionNumber, setQuestionNumber, score, setScore } = useContext(QuizContext)
+
+
 	return (
 		<PageWrapper>
-			<Typography variant="h1" textAlign="center">{score} correct answers!</Typography>
+			<Typography variant="h1" textAlign="center"> correct answers: {score}</Typography>
+			<Typography variant="h1" textAlign="center"> You {score > 5 ? "Passed" : "Failed"}</Typography>
 		</PageWrapper>
 	)
 }

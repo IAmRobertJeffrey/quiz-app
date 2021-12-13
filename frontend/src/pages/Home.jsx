@@ -13,14 +13,16 @@ import QuizContext from '../context/QuizContext'
 
 const Home = () =>
 {
-	const { getCategories, selectedDifficulty, selectedCategory, getQuiz } = useContext(ApiContext)
-	const { setScore, setQuestionNumber } = useContext(QuizContext)
+	const { getCategories, selectedDifficulty, selectedCategory, getQuiz, setCurrentQuizQuestions } = useContext(ApiContext)
+	const { setScore, setQuestionNumber, setCurrentQuizQuestion } = useContext(QuizContext)
 	const navigate = useNavigate()
 	useEffect(() =>
 	{
 		getCategories();
 		setScore(0);
 		setQuestionNumber(0);
+		setCurrentQuizQuestion('')
+		setCurrentQuizQuestions([])
 		console.log("got categories");
 
 	}, [])

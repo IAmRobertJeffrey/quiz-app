@@ -11,7 +11,7 @@ import he from 'he'
 const Quiz = () =>
 {
 	const { selectedDifficulty, selectedCategory, currentQuizQuestions } = useContext(ApiContext)
-	const { currentQuizQuestion, setCurrentQuizQuestion, questionNumber, setQuestionNumber, score, setScore } = useContext(QuizContext)
+	const { currentQuizQuestion, setCurrentQuizQuestion, questionNumber, setQuestionNumber, score, setScore, time, setTime } = useContext(QuizContext)
 	let wrongAnwers = useRef();
 	let correctAnswer = useRef();
 	let answers = useRef([]);
@@ -71,6 +71,10 @@ const Quiz = () =>
 
 
 					setCurrentQuizQuestion(he.decode(currentQuizQuestions.results[questionNumber].question))
+					setInterval(() =>
+					{
+						setTime(time + 1)
+					}, 1000)
 
 				}
 				else
