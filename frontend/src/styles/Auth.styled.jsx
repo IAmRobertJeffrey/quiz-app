@@ -6,18 +6,22 @@ export const AuthWrapper = styled(PageWrapper)({
 	display: "flex",
 	alignItems: "center",
 	justifyContent: "center",
-	paddingTop: "0px !important"
+	paddingTop: "0px !important",
+	width: "500px !important",
+	maxWidth: "500px !important",
+	minWidth: "500px !important",
 
 })
 
 export const Auth = styled(Box)({
+
 
 	display: "flex",
 	flexDirection: "column",
 	width: "500px",
 	height: "500px",
 	boxSizing: "border-box",
-
+	backgroundColor: "white",
 	borderRadius: "0.5rem",
 	boxShadow: `
   1.4px 1.4px 3.1px rgba(0, 0, 0, 0.09),

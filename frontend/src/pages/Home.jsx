@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { PageWrapper } from '../styles/General.styled'
 import { useContext } from 'react'
 import ApiContext from '../context/ApiContext'
-import { Button, Container } from '@mui/material'
+import { Button, Container, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import DifficultyPicker from '../components/DifficultyPicker'
 
@@ -37,12 +37,33 @@ const Home = () =>
 	}
 
 	return (
-		<PageWrapper>
-			<Container sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", height: "100%" }}>
+		<PageWrapper sx={{
 
-				<Box sx={{ display: "flex", flexDirection: "column", width: "50%", gridGap: "4rem" }}>
-					<CategoryPicker />
-					<DifficultyPicker />
+
+		}}>
+			<Container sx={{ zIndex: "2 !important", py: "50px !important", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", height: "100%" }}>
+
+				<Box sx={{
+					display: "flex", flexDirection: "column", width: "500px", gridGap: "4rem", boxSizing: "border-box",
+					padding: "4rem",
+					borderRadius: "0.5rem",
+					boxShadow: `
+1.4px 1.4px 3.1px rgba(0, 0, 0, 0.09),
+3.3px 3.4px 7.4px rgba(0, 0, 0, 0.065),
+6.3px 6.4px 14px rgba(0, 0, 0, 0.054),
+11.2px 11.4px 25px rgba(0, 0, 0, 0.045),
+20.9px 21.3px 46.8px rgba(0, 0, 0, 0.036),
+50px 51px 112px rgba(0, 0, 0, 0.025)
+`,
+					zIndex: "3 !important",
+					backgroundColor: "white",
+				}}>
+
+					<Typography variant="h2" textAlign="center">Pick a quiz.</Typography>
+					<Box sx={{ gridGap: "2rem", display: "flex", flexDirection: "column", justifySelf: "flex-start" }}>
+						<CategoryPicker />
+						<DifficultyPicker />
+					</Box>
 					<Button onClick={handleStartQuiz} variant="contained">Start Quiz</Button>
 				</Box>
 			</Container>

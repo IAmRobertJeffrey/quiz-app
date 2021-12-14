@@ -94,15 +94,15 @@ const Quiz = () =>
 	return (
 
 
-		<PageWrapper>
-			<Container sx={{ pt: "40px", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-evenly" }}>
+		<PageWrapper sx={{ alignItems: "center", justifyContent: "center", display: "flex" }}>
+			<Container sx={{ py: "50px !important", minheight: "100%", height: "100%", gridGap: "100px", display: "flex", flexDirection: "column", justifyContent: "space-evenly" }}>
 
 				<Typography textAlign="center" variant="h2">{currentQuizQuestion}</Typography>
 
 				<Grid spacing={2} sx={{ display: "flex" }} container>
 					{
 						answers.current.map((answer) => (
-							<Grid xs={6} s={6} md={6} lg={6} key={answer} item>
+							<Grid xs={12} s={12} md={6} lg={6} key={answer} item>
 								<Button sx={{ width: "100%", boxSizing: "border-box", fontSize: "1.25rem", height: "100%", minHeight: "100px" }} variant="contained" onClick={() => handleAnswer(answer)} >{he.decode(answer)}</Button>
 							</Grid>
 						))
