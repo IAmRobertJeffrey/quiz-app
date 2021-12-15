@@ -15,7 +15,8 @@ export const PageWrapper = styled(Container)({
 	boxSizing: "border-box !important",
 	backgroundImage: "url(./img/wave.svg)",
 	backgroundRepeat: "no-repeat",
-	backgroundSize: "550vh",
+	// backgroundSize: "550vh",
+	backgroundSize: "350rem",
 	backgroundPositionX: "center",
 	zIndex: "0 !important",
 })

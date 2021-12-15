@@ -7,6 +7,7 @@ import QuizContext from '../context/QuizContext'
 import { Container, Grid, Typography } from '@mui/material'
 import { Button } from '@mui/material'
 import he from 'he'
+import { red, teal } from '@mui/material/colors'
 
 const Quiz = () =>
 {
@@ -97,7 +98,10 @@ const Quiz = () =>
 		<PageWrapper sx={{ alignItems: "center", justifyContent: "center", display: "flex" }}>
 			<Container sx={{ py: "50px !important", minheight: "100%", height: "100%", gridGap: "100px", display: "flex", flexDirection: "column", justifyContent: "space-evenly" }}>
 
-				<Typography textAlign="center" variant="h2">{currentQuizQuestion}</Typography>
+				<Button disableRipple disableElevation color="info" variant="contained" sx={{ fontSize: "2rem", width: "80%", textAlign: "center", alignSelf: "center", border: "white solid 2px" }}>
+					{currentQuizQuestion}
+					{/* <Typography color="white" textAlign="center" variant="h2">{currentQuizQuestion}</Typography> */}
+				</Button>
 
 				<Grid spacing={2} sx={{ display: "flex" }} container>
 					{
