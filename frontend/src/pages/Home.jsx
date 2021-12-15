@@ -6,7 +6,6 @@ import ApiContext from '../context/ApiContext'
 import { Button, Container, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import DifficultyPicker from '../components/DifficultyPicker'
-
 import CategoryPicker from '../components/CategoryPicker'
 import { useNavigate } from 'react-router-dom'
 import QuizContext from '../context/QuizContext'
@@ -25,6 +24,7 @@ const Home = () =>
 		setCurrentQuizQuestions([])
 		console.log("got categories");
 
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
 	function handleStartQuiz()
@@ -38,6 +38,7 @@ const Home = () =>
 
 	return (
 		<PageWrapper sx={{
+
 
 
 		}}>
