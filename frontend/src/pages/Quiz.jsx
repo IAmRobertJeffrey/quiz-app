@@ -95,7 +95,6 @@ const Quiz = () =>
 
 	return (
 
-
 		<PageWrapper sx={{ alignItems: "center", justifyContent: "center", display: "flex" }}>
 			<Container sx={{ py: "50px !important", minheight: "100%", height: "100%", gridGap: "100px", display: "flex", flexDirection: "column", justifyContent: "space-evenly" }}>
 
