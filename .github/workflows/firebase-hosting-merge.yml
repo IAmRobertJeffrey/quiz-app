@@ -18,4 +18,4 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ROBS_QUIZ }}'
           channelId: live
           projectId: robs-quiz
-          entryPoint: "./frontend"
+       
