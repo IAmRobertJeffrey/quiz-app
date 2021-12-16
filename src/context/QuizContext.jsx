@@ -1,7 +1,5 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import { createContext } from 'react'
-import ApiContext from './ApiContext'
-import { useRef } from 'react'
 const QuizContext = createContext({})
 
 export const QuizProvidor = ({ children }) =>

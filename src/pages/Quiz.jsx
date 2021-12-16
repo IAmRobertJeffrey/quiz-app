@@ -4,10 +4,9 @@ import { useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import ApiContext from '../context/ApiContext'
 import QuizContext from '../context/QuizContext'
-import { Container, Grid, Typography } from '@mui/material'
+import { Container, Grid } from '@mui/material'
 import { Button } from '@mui/material'
 import he from 'he'
-import { red, teal } from '@mui/material/colors'
 
 const Quiz = () =>
 {
