@@ -27,8 +27,7 @@ const Quiz = () =>
 			console.log("CORRECT!");
 			setScore(score + 1)
 		}
-		console.log(questionNumber)
-		console.log(currentQuizQuestions.results.length);
+
 		if (questionNumber < currentQuizQuestions.results.length - 1)
 		{
 
@@ -66,7 +65,7 @@ const Quiz = () =>
 					correctAnswer.current = currentQuizQuestions.results[questionNumber].correct_answer
 					answers.current = [...wrongAnwers.current, correctAnswer.current]
 					shuffleArray(answers.current)
-					console.log(answers.current);
+
 
 
 
