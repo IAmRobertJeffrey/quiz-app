@@ -3,11 +3,11 @@ import { PageWrapper } from '../styles/General.styled'
 import { useContext } from 'react'
 import QuizContext from '../context/QuizContext'
 import { Paper, Typography } from '@mui/material'
-import { Box } from '@mui/system'
+
 
 const Results = () =>
 {
-	const { currentQuizQuestion, setCurrentQuizQuestion, questionNumber, setQuestionNumber, score, setScore } = useContext(QuizContext)
+	const { score, } = useContext(QuizContext)
 
 
 	return (

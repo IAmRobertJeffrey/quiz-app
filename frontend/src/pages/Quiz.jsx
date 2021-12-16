@@ -89,6 +89,7 @@ const Quiz = () =>
 		{
 			navigate("/");
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [currentQuizQuestions, navigate, selectedCategory, selectedDifficulty, currentQuizQuestion, setCurrentQuizQuestion, questionNumber])
 
 

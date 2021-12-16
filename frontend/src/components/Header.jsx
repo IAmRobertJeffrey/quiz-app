@@ -1,13 +1,13 @@
 import React from 'react'
 import { AppBar, Toolbar } from '@mui/material'
-import { Button, ButtonGroup } from '@mui/material'
+// import { Button, ButtonGroup } from '@mui/material'
 import { Typography } from '@mui/material'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 import { QuizWhiz } from '../styles/General.styled'
 
 const Header = () =>
 {
-	const navigate = useNavigate();
+	// const navigate = useNavigate();
 
 
 
