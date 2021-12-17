@@ -45,6 +45,7 @@ const Home = () =>
 			<Container sx={{ zIndex: "2 !important", py: "50px !important", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", height: "100%" }}>
 
 				<Box sx={{
+
 					display: "flex", flexDirection: "column", width: "500px", gridGap: "4rem", boxSizing: "border-box",
 					padding: "4rem",
 					borderRadius: "0.5rem",
