@@ -30,7 +30,6 @@ const Quiz = () =>
 
 		if (questionNumber < currentQuizQuestions.results.length - 1)
 		{
-
 			setQuestionNumber(questionNumber + 1)
 		}
 		else
